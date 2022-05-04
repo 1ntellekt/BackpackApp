@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/brown_color"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_dialog_add">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Добавление учебника"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/r1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <EditText
+            android:paddingStart="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edName"
+            android:hint="Введтите название учебника..."
+            android:background="@drawable/edit_input_sign"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+           <Spinner
+               android:layout_marginTop="10dp"
+               android:id="@+id/authorSpinner"
+               android:background="@drawable/sub_choose"
+               android:layout_width="match_parent"
+               android:layout_height="30dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/spinnerSub"
+                android:background="@drawable/sub_choose"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"/>
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:id="@+id/spinnerClass"
+                android:background="@drawable/sub_choose"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:background="@drawable/btn_choose_file"
+                android:id="@+id/btnAddFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Статус: Файл не выбран"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

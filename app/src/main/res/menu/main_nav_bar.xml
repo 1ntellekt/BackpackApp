@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_search"
+        android:title="Поиск"
+        android:icon="@drawable/ic_search"/>
+
+    <item android:id="@+id/nav_person"
+        android:title="Профиль"
+        android:icon="@drawable/ic_baseline_person_24"/>
+
+    <item android:id="@+id/nav_backpack"
+        android:title="Портфель"
+        android:icon="@drawable/ic_baseline_backpack_24"/>
+
+    <item android:id="@+id/nav_info"
+        android:title="Информация"
+        android:icon="@drawable/ic_baseline_info_24"/>
+
+</menu>

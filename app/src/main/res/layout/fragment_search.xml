@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/back_color"
+    tools:context=".fragments.SearchFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/head_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Поиск учебников"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <!--form_search-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/form_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head_txt"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/brown_color">
+
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/head_formtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="Форма поиска"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"/>
+                    <SearchView
+                        android:id="@+id/bookSearch"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/white"
+                        android:queryHint="Введите название учебника..."
+                        android:layout_height="40dp"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <Spinner
+                            android:id="@+id/spinnerSub"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/sub_choose"
+                            android:layout_height="30dp"/>
+                        <RelativeLayout
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"/>
+                        <Spinner
+                            android:id="@+id/spinnerClass"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/sub_choose"
+                            android:layout_height="30dp"/>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSearch"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/search_btn"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/head_txt_rez"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/form_search"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Результаты поиска"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/head_txt_rez"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</FrameLayout>

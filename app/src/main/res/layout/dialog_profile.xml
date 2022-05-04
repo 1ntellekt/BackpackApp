@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/brown_color"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/back_dialog_add"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Редактирование профиля"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edSurname"
+            android:background="@drawable/edit_input_sign"
+            android:layout_width="match_parent"
+            android:hint="Введите фамилию...."
+            android:paddingStart="10dp"
+            android:layout_height="40dp"/>
+        <EditText
+            android:id="@+id/edName"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_input_sign"
+            android:layout_width="match_parent"
+            android:hint="Введите имя...."
+            android:paddingStart="10dp"
+            android:layout_height="40dp"/>
+        <EditText
+            android:id="@+id/edTelephone"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_input_sign"
+            android:layout_width="match_parent"
+            android:hint="Введите телефон...."
+            android:paddingStart="10dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
